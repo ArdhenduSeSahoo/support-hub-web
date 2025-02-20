@@ -34,7 +34,7 @@ export const counterSlice = createAppSlice({
     incrementByAmount: create.reducer(
       (state, action: PayloadAction<number>) => {
         state.value += action.payload;
-      },
+      }
     ),
     // The function below is called a thunk and allows us to perform async logic. It
     // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -45,7 +45,7 @@ export const counterSlice = createAppSlice({
       async (amount: number) => {
         const response = await fetchCount(amount);
         // The value we return becomes the `fulfilled` action payload
-        return response.data;
+        return 2;
       },
       {
         pending: (state) => {
@@ -58,7 +58,7 @@ export const counterSlice = createAppSlice({
         rejected: (state) => {
           state.status = "failed";
         },
-      },
+      }
     ),
   }),
   // You can define your selectors here. These selectors receive the slice
