@@ -1,12 +1,12 @@
-import { useAppDispatchDashboard } from "@/lib/Redux/Hooks/DashboardHooks";
-import { useEffect} from "react";
-import { fetchDataChart_Four } from "@/lib/Redux/Slices/dashboardSlice/DashboardSlice";
+//import { useAppDispatchDashboard } from "@/lib/Redux/Hooks/DashboardHooks";
+import { useEffect } from "react";
+//import { fetchDataChart_Four } from "@/lib/Redux/Slices/dashboardSlice/DashboardSlice";
 import ChartFour from "./ChartFour";
 
 export default function ChartCardFour() {
-  const dispatch = useAppDispatchDashboard();
-  useEffect(()=>{
-    dispatch(fetchDataChart_Four("AssignmentGroups"));
+  //const dispatch = useAppDispatchDashboard();
+  useEffect(() => {
+    //dispatch(fetchDataChart_Four("AssignmentGroups"));
   });
   return (
     <div className="flex w-full flex-col">

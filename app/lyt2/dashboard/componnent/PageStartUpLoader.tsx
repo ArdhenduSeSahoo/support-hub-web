@@ -1,15 +1,30 @@
 "use client";
 
+import { useAppDispatchDashboard } from "@/lib/Redux/Hooks/DashboardHooks";
+import {
+  fetchDataChart_Four,
+  fetchDataChart_One,
+  fetchDataChart_Three,
+  fetchDataChart_Two,
+} from "@/lib/Redux/Slices/dashboardSlice/DashboardSlice";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function PageStartUpLoaderUI() {
   const [visible, setVisible] = useState(true);
+  const dispatch = useAppDispatchDashboard();
   useEffect(() => {
     console.log("inside effect call");
     setTimeout(() => {
-      setVisible(false);
+      if (visible) {
+        setVisible(false);
+
+        dispatch(fetchDataChart_One("Location"));
+        dispatch(fetchDataChart_Two("OperationalTier"));
+        dispatch(fetchDataChart_Three("ConfigurationItems"));
+        dispatch(fetchDataChart_Four("AssignmentGroups"));
+      }
     }, 4000);
   });
   return (

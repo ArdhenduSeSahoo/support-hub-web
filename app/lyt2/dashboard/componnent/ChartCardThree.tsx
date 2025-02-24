@@ -1,12 +1,12 @@
-import { useAppDispatchDashboard } from "@/lib/Redux/Hooks/DashboardHooks";
-import { useEffect} from "react";
-import { fetchDataChart_Three } from "@/lib/Redux/Slices/dashboardSlice/DashboardSlice";
+//import { useAppDispatchDashboard } from "@/lib/Redux/Hooks/DashboardHooks";
+import { useEffect } from "react";
+//import { fetchDataChart_Three } from "@/lib/Redux/Slices/dashboardSlice/DashboardSlice";
 import ChartThree from "./ChartThree";
 
 export default function ChartCardThree() {
-  const dispatch = useAppDispatchDashboard();
-  useEffect(()=>{
-    dispatch(fetchDataChart_Three("ConfigurationItems"));
+  //const dispatch = useAppDispatchDashboard();
+  useEffect(() => {
+    //dispatch(fetchDataChart_Three("ConfigurationItems"));
   });
   return (
     <div className="flex w-full flex-col">
