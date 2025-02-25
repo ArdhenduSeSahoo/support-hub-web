@@ -25,7 +25,7 @@ export default function PageStartUpLoaderUI() {
         dispatch(fetchDataChart_Three("ConfigurationItems"));
         dispatch(fetchDataChart_Four("AssignmentGroups"));
       }
-    }, 9000);
+    }, 11000);
   });
   return (
     <>
